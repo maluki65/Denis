@@ -1,5 +1,8 @@
-# NeuroBloom
 
+# NeuroBloom
+An interactive and engaging platform designed to support children with autism.
+
+#Overview
 NeuroBloom is an interactive puzzle game built using React and Node.js. It features a 15-puzzle game where users can shuffle and arrange tiles in the correct order. Additionally, a ChatGPT-powered chatbox has been implemented, allowing users to interact with an AI assistant.
 
 ## Features
