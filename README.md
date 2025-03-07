@@ -1,62 +1,78 @@
-# Autism Assistance Game
+# NeuroBloom
 
-A fun and interactive game designed to help children with Autism develop essential cognitive and social skills. The game provides engaging activities that enhance learning, communication, and problem-solving in an enjoyable environment.
+NeuroBloom is an interactive puzzle game built using React and Node.js. It features a 15-puzzle game where users can shuffle and arrange tiles in the correct order. Additionally, a ChatGPT-powered chatbox has been implemented, allowing users to interact with an AI assistant.
 
 ## Features
-- **Interactive Gameplay:** Engaging activities tailored for children with Autism.
-- **User-Friendly Interface:** Simple and intuitive design for easy navigation.
-- **Educational Content:** Designed to improve cognitive and motor skills.
-- **Customizable Experience:** Adjustable difficulty levels to match individual needs.
-- **Positive Reinforcement:** Encourages progress with rewards and achievements.
+
+- **15-Puzzle Game**: A classic sliding puzzle where users arrange tiles in numerical order.
+- **ChatGPT Chatbox**: An AI-powered chatbot that responds to user messages in real-time.
+- **User Authentication**: Secure login and logout functionality.
+- **Responsive UI**: Designed with a clean and user-friendly interface.
 
 ## Technologies Used
-- **Frontend:** React.js 
-- **Backend:** Node.js with Express 
-- **Database:** MongoDB 
-- **Styling:** CSS / ANT Design
 
-## Installation
-Follow these steps to clone and run the project on your local machine.
+### Frontend
+- React.js (Vite for bundling)
+- CSS for styling
+- Axios for API requests
+
+### Backend
+- Node.js with Express.js
+- ChatGPT API integration
+- MongoDB (if applicable)
+
+## Setup Instructions
 
 ### Prerequisites
 Ensure you have the following installed:
-- [Node.js](https://nodejs.org/)
-- [Git](https://git-scm.com/)
+- Node.js
+- npm or yarn
 
-### Clone the Repository
-```sh
-git clone https://github.com/yourusername/autism-assistance-game.git
-cd autism-assistance-game
-```
+### Installation
 
-### Install Dependencies
-```sh
-npm install
-```
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/maluki65/NeuroBloom.git
+   ```
+2. Navigate into the project directory:
+   ```sh
+   cd NeuroBloom
+   ```
+3. Install dependencies for the frontend:
+   ```sh
+   cd client
+   npm install
+   ```
+4. Install dependencies for the backend:
+   ```sh
+   cd ../server
+   npm install
+   ```
 
-### Run the Application
+### Running the Project
+
+#### Start the Backend Server
 ```sh
+cd server
 npm start
 ```
 
-The application should now be running on `http://localhost:3000` (or another port if specified).
+#### Start the Frontend
+```sh
+cd client
+npm run dev
+```
+
+## Usage
+- Start a new game and arrange the puzzle tiles.
+- Interact with the ChatGPT chatbox by typing messages.
+- Logout when done.
 
 ## Contributing
-We welcome contributions! If you would like to contribute, please follow these steps:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Make your changes and commit them (`git commit -m 'Added a new feature'`).
-4. Push to your branch (`git push origin feature-name`).
-5. Submit a Pull Request.
+Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 ## License
 This project is licensed under the MIT License.
 
 ## Contact
-For any questions or suggestions, feel free to reach out:
-- **Email:** brayanmaluki@gmail.com
-- **GitHub:** [maluki65]((https://github.com/maluki65)
-
----
-
-Enjoy the game and help children with Autism grow through interactive learning! 🎮✨
+For any inquiries, reach out via [GitHub](https://github.com/maluki65/NeuroBloom).
