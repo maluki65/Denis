@@ -1,24 +1,30 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
+const dotenv = require("dotenv");
 const authRouter = require("./Routes/authRoute");
+const chatController = require("./controllers/chatController"); // ✅ Correct Import
+
+require("dotenv").config(); // Load environment variables
 
 const app = express();
 
-//On creating middlewares
+// Middleware
 app.use(cors());
 app.use(express.json());
 
-//On creating routes
+// Routes
 app.use("/api/auth", authRouter);
+app.post("/api/chat", chatController); // ✅ Fix: Pass the controller function
 
-//On connecting db
+// Database Connection
 mongoose.connect("mongodb://localhost:27017/Authentication")
-.then(() => console.log("Connected to Database!"))
-.catch((error) => console.error("Failed to connet to Database:", error));
+    .then(() => console.log("✅ Connected to Database!"))
+    .catch((error) => console.error("❌ Failed to connect to Database:", error));
 
-//On creating global error-handlers
-app.use ((err, req, res, next) => {
+// Global Error Handler
+app.use((err, req, res, next) => {
     err.statusCode = err.statusCode || 500;
     err.status = err.status || "error";
 
@@ -28,8 +34,8 @@ app.use ((err, req, res, next) => {
     });
 });
 
-// On initializing server-side
+// Start Server
 const PORT = 3000;
-app.listen(PORT, ()=> {
-    console.log(`App is running on ${PORT}`);
+app.listen(PORT, () => {
+    console.log(`🚀 Server running on http://localhost:${PORT}`);
 });
